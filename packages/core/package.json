@@ -5,6 +5,12 @@
     "main": "dist/index.js",
     "type": "module",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
     "scripts": {
         "build": "tsup --format esm --dts",
         "lint": "eslint . --fix",
@@ -48,7 +54,8 @@
         "ts-node": "10.9.2",
         "tslib": "2.8.0",
         "tsup": "^8.3.5",
-        "typescript": "5.6.3"
+        "typescript": "5.6.3",
+        "unbuild": "^2.0.0"
     },
     "dependencies": {
         "@ai-sdk/anthropic": "^0.0.53",

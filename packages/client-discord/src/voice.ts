@@ -36,6 +36,7 @@ import {
     UUID,
 } from "@ai16z/eliza";
 import { stringToUuid } from "@ai16z/eliza";
+import { messageCompletionFooter } from "@ai16z/eliza";
 
 export function getWavHeader(
     audioLength: number,
@@ -62,8 +63,6 @@ export function getWavHeader(
     wavHeader.writeUInt32LE(audioLength, 40); // Data chunk size
     return wavHeader;
 }
-
-import { messageCompletionFooter } from "@ai16z/eliza/src/parsing.ts";
 
 const discordVoiceHandlerTemplate =
     `# Task: Generate conversational voice dialog for {{agentName}}.
@@ -401,6 +400,7 @@ export class VoiceManager extends EventEmitter {
                         const text = await this.runtime
                             .getService(ServiceType.TRANSCRIPTION)
                             .getInstance<ITranscriptionService>()
+                            // @ts-expect-error
                             .transcribe(wavBuffer);
                         console.log("transcribed text: ", text);
                         transcriptionText += text;
