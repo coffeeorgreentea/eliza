@@ -2,3 +2,5 @@ packages:
     - "docs"
     - "packages/*"
     - "client"
+    - "meta/playground"
+    - "meta"

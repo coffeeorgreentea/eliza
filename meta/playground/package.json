@@ -1,0 +1,19 @@
+{
+    "name": "playground",
+    "version": "1.0.0",
+    "description": "playground for eliza-nitro",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "NODE_OPTIONS='--experimental-specifier-resolution=node' && pnpm eliza dev"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@ai16z/eliza-nitro": "workspace:*",
+        "@ai16z/eliza": "workspace:*"
+    },
+    "devDependencies": {
+        "typescript": "^5.6.3"
+    }
+}

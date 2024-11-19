@@ -1,0 +1,3 @@
+{
+    "extends": "./.eliza/types/tsconfig.json"
+}

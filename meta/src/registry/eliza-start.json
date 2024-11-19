@@ -1,0 +1,6 @@
+{
+    "name": "eliza-template",
+    "defaultDir": "eliza",
+    "url": "https://github.com/coffeeorgreentea/eliza-start",
+    "tar": "https://codeload.github.com/coffeeorgreentea/eliza-start/tar.gz/refs/heads/main"
+}
